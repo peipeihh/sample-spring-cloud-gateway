@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+    <!-- 引入配置，路径区分大小写 -->
+    <bean id="propertyConfigurer"
+          class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <!--<value>file:/app/config/gw.properties</value>-->
+                <value>classpath:properties/gw.properties</value>
+            </list>
+        </property>
+    </bean>
+
+    <!-- 加载cachecenter的配置文件 -->
+    <!--<import resource="classpath*:context/cachecenter.xml"/>-->
+
+</beans>
